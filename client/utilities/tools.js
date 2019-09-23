@@ -1,0 +1,8 @@
+const gatherData = () => {
+
+}
+
+
+export { 
+    gatherData,
+}
