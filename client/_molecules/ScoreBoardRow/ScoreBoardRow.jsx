@@ -1,16 +1,15 @@
 import React, { Fragment, useState } from 'react';
-import _ from 'lodash';
+import times from 'lodash/times';
 import Period from 'Atoms/Period/Period.jsx';
 
 import './ScoreBoardRow.scss';
 
 const ScoreBoardRow = (props) => {
     let gameScore = 0;
-    const { location, gameData } = props;
-    // const periodScores = gameData[`${location}_period_scores`];
-    const periodScores = [1, 2, 3];
+    const { location, gameData, totalPeriods } = props;
+    const periodScores = gameData[`${location}_period_scores`];
     const teamInfo = gameData[`${location}_team`];
-    const remainingPeriods = (gameData.league === 'MLB') ? 9 - periodScores.length : 4 - periodScores.length;
+    const remainingPeriods = totalPeriods - periodScores.length;
 
     return (
         <div className="team-data" id={location}>
@@ -28,7 +27,7 @@ const ScoreBoardRow = (props) => {
                     />
                 )
             })}
-            {_.times(remainingPeriods, (index) => {
+            {times(remainingPeriods, (index) => {
                 return (
                     <Period
                         key={index + 1}

@@ -33,7 +33,6 @@ class Index extends Component {
 
     render() {
         const { currentSport, gameData } = this.state;
-        console.log(gameData);
         return (
             <Fragment>
                 <Header 

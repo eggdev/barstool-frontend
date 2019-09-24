@@ -1,0 +1,42 @@
+/* Set custom breakpoints for responsive design */
+$iphone6: 375px;
+$large-phones: 425px;
+$phone-max: 599px;
+$tablet-min: 600px;
+$desktop-min: 900px;
+$lg-desktop: 1200px;
+
+@mixin for-medium-phones {
+	@media only screen and (min-width: $iphone6) {
+		@content;
+	}
+}
+
+@mixin for-large-phones {
+	@media only screen and (min-width: $large-phones) {
+		@content;
+	}
+}
+
+@mixin for-phone-only {
+	@media only screen and (max-width: $phone-max) {
+		@content;
+	}
+}
+@mixin for-tablets {
+	@media only screen and (min-width: $tablet-min) {
+		@content;
+	}
+}
+
+@mixin for-desktop {
+	@media only  screen and (min-width: $desktop-min) {
+		@content;
+	}
+}
+
+@mixin for-large-desktop {
+	@media only screen and (min-width: $lg-desktop) {
+		@content;
+	}
+}
