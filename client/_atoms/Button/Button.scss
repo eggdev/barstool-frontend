@@ -1,0 +1,10 @@
+.btn {
+    width: 50%;
+    text-align: center;
+    padding: 1rem;
+    outline: none;
+    cursor: pointer;
+    &.active {
+        background: lightblue;
+    }
+}
