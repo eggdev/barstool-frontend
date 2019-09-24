@@ -3,11 +3,15 @@ import ReactDOM from 'react-dom';
 
 const Index = lazy(() => import('Templates/Index.jsx'));
 
+import './styles/Common.scss';
+
 const App = () => {
     return (
-        <Suspense fallback={<div>Loading...</div>}>
-            <Index />
-        </Suspense>
+        <div className="site-wrapper">
+            <Suspense fallback={<div>Loading...</div>}>
+                <Index />
+            </Suspense>
+        </div>
     )
 }
 

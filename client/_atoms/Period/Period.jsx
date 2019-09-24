@@ -4,7 +4,7 @@ import './Period.scss';
 
 const Period = (props) => {
     return (
-        <div className="period">
+        <div className={`period ${props.dataType}`}>
             <p>{props.value}</p>
         </div>
     )

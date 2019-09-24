@@ -3,11 +3,13 @@ import React, { useState, useEffect, lazy, Suspense } from 'react';
 const Period = lazy(() => import('Atoms/Period/Period.jsx'));
 const ScoreBoardRow = lazy(() => import('Molecules/ScoreBoardRow/ScoreBoardRow.jsx'));
 
+import './Scoreboard.scss';
+
 const Scoreboard = (props) => {
     const { gameData } = props;
     
     return (
-        <div>
+        <div className="scoreboard-wrapper">
             <Suspense fallback={<div>Loading Data...</div>}>
                 <div className="team-row">
                     <ScoreBoardRow 
