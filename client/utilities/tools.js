@@ -1,24 +1,10 @@
 import 'whatwg-fetch';
 
-import Leagues from 'Utilities/leagues.js';
-
-const gatherData = (leagueName) => {
-    const apiUrl = Leagues[leagueName];
-    return fetch(apiUrl)
-        .then((res) => {
-            if(!res.ok) {
-
-            }
-            return res;
-        }).then((res) => {
-            return res.json();
-        })
-        .catch(() => {
-            // Error Logic
-        })
+const gatherGameData = async (leagueName) => {
+    const response = await fetch(`http://localhost:3000/data/${leagueName}`);
+    return response.json();
 }
 
-
 export { 
-    gatherData,
+    gatherGameData,
 }

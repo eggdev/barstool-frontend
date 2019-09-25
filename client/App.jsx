@@ -1,6 +1,5 @@
 import React, { Suspense, lazy } from 'react';
 import ReactDOM from 'react-dom';
-
 const Index = lazy(() => import('Templates/Index.jsx'));
 
 import './styles/Common.scss';

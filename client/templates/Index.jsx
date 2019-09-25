@@ -3,7 +3,7 @@ import React, { Component, Fragment, Suspense, lazy } from 'react';
 // Molecules
 import Header from 'Molecules/Header/Header.jsx';
 
-import { gatherData } from 'Utilities/tools.js';
+import { gatherGameData } from 'Utilities/tools.js';
 
 const Scoreboard = lazy(() => import('Organisms/Scoreboard/Scoreboard.jsx'));
 
@@ -14,6 +14,7 @@ class Index extends Component {
         this.state = {
             currentSport: 'mlb',
             gameData: {},
+            appData: {},
         }
     }
 
@@ -22,9 +23,10 @@ class Index extends Component {
     }
 
     getSportData = async (sportName) => {
-        const newData = await gatherData(sportName);
+        const newData = await gatherGameData(sportName);
         this.setState({ gameData: newData });
     }
+
 
     toggleSport = (sportName) => {
         this.setState({ currentSport: sportName });
