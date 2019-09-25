@@ -41,9 +41,13 @@ class Index extends Component {
                     toggleSport={this.toggleSport}
                     currentSport={currentSport}
                 />
-                <Scoreboard
-                    gameData={gameData}
-                />
+                {gameData !== {} ? (
+                    <Scoreboard
+                        gameData={gameData}
+                    />
+                ) : (
+                    <div>Loading</div>
+                )}
             </Fragment>
 
         );
