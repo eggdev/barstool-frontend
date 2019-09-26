@@ -26,11 +26,11 @@ const ScoreBoardHeader = (props) => {
             {(leagueName === 'MLB') ? (
                 <Fragment>
                     <Period
-                        value="RUNS"
+                        value="RUN"
                         dataType="finals-header"
                     />
                     <Period
-                        value="HITS"
+                        value="HIT"
                         dataType="finals-header"
                     />
                     <Period

@@ -5,6 +5,8 @@ import Header from 'Molecules/Header/Header.jsx';
 
 import { gatherGameData } from 'Utilities/tools.js';
 
+import './Index.scss';
+
 const Scoreboard = lazy(() => import('Organisms/Scoreboard/Scoreboard.jsx'));
 
 class Index extends Component {
@@ -40,8 +42,8 @@ class Index extends Component {
     render() {
         const { currentSport, gameData, loaded } = this.state;
         return (
-            <Fragment>
-                <Header 
+            <div className="index-container">
+                <Header
                     toggleSport={this.toggleSport}
                     currentSport={currentSport}
                 />
@@ -50,10 +52,9 @@ class Index extends Component {
                         gameData={gameData}
                     />
                 ) : (
-                    <div>Loading</div>
-                )}
-            </Fragment>
-
+                        <div>Loading</div>
+                    )}
+            </div>
         );
     }   
 }

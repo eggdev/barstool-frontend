@@ -4,7 +4,14 @@
     padding: 1rem;
     outline: none;
     cursor: pointer;
+    color: #0a0a0a;
+    font-family: 'Arbutus', cursive;
+    font-size: 20px;
+    transition: all .3s ease-in;
+    &.inactive:hover {
+        background: #888;
+    }
     &.active {
-        background: lightblue;
+        background: #00FF00;
     }
 }
