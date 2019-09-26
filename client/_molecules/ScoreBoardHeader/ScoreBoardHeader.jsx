@@ -23,12 +23,12 @@ const ScoreBoardHeader = (props) => {
                     />
                 )
             })}
-            {(leagueName === 'MLB') ? (
+            <Period
+                value={`${leagueName === 'MLB' ? 'RUN' : 'T'}`}
+                dataType="finals-header"
+            />
+            {(leagueName === 'MLB') && (
                 <Fragment>
-                    <Period
-                        value="RUN"
-                        dataType="finals-header"
-                    />
                     <Period
                         value="HIT"
                         dataType="finals-header"
@@ -38,11 +38,6 @@ const ScoreBoardHeader = (props) => {
                         dataType="finals-header"
                     />
                 </Fragment>
-            ) : (
-                <Period
-                    value="T"
-                    dataType="finals-header"
-                />
             )}
         </div>
     )

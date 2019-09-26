@@ -2,6 +2,7 @@ import React, { Component, Fragment, Suspense, lazy } from 'react';
 
 // Molecules
 import Header from 'Molecules/Header/Header.jsx';
+import Loading from 'Molecules/Loading/Loading.jsx';
 
 import { gatherGameData } from 'Utilities/tools.js';
 
@@ -52,8 +53,8 @@ class Index extends Component {
                         gameData={gameData}
                     />
                 ) : (
-                        <div>Loading</div>
-                    )}
+                    <Loading />
+                )}
             </div>
         );
     }   
