@@ -15,6 +15,7 @@ class Index extends Component {
             currentSport: 'mlb',
             gameData: {},
             appData: {},
+            loaded: false,
         }
     }
 
@@ -24,7 +25,10 @@ class Index extends Component {
 
     getSportData = async (sportName) => {
         const newData = await gatherGameData(sportName);
-        this.setState({ gameData: newData });
+        this.setState({ 
+            gameData: newData,
+            loaded: true,
+        });
     }
 
 
@@ -34,14 +38,14 @@ class Index extends Component {
     }
 
     render() {
-        const { currentSport, gameData } = this.state;
+        const { currentSport, gameData, loaded } = this.state;
         return (
             <Fragment>
                 <Header 
                     toggleSport={this.toggleSport}
                     currentSport={currentSport}
                 />
-                {gameData !== {} ? (
+                {loaded ? (
                     <Scoreboard
                         gameData={gameData}
                     />

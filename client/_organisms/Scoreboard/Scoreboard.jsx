@@ -10,7 +10,7 @@ const Scoreboard = (props) => {
     const totalPeriods = (gameData.league === 'MLB') ? 9 : (gameData.league === 'NHL') ? 3 : 4;
 
     return (
-        <div className="scoreboard-wrapper">
+        <div className={`scoreboard-wrapper ${gameData.league.toLowerCase()}`}>
             <Suspense fallback={<div>Loading Data...</div>}>
                 <div className="team-row">
                     <ScoreBoardHeader 

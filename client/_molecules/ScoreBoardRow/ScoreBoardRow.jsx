@@ -5,8 +5,8 @@ import Period from 'Atoms/Period/Period.jsx';
 import './ScoreBoardRow.scss';
 
 const ScoreBoardRow = (props) => {
-    let gameScore = 0;
     const { location, gameData, totalPeriods } = props;
+    let gameScore = 0;
     const periodScores = gameData[`${location}_period_scores`];
     const teamInfo = gameData[`${location}_team`];
     const remainingPeriods = totalPeriods - periodScores.length;

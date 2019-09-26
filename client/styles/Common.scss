@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 @import url('./Config.scss');
 
 
@@ -8,3 +7,16 @@ body, html, * {
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
 }
+
+// @media (prefers-color-scheme: dark) {
+//     body {
+//         background: #333; 
+//         color: #fefefe;
+//     }
+// }
+// @media (prefers-color-scheme: light) {
+//     body {
+//         background: #ccc; 
+//         color: #0a0a0a;
+//     }
+// }

@@ -11,37 +11,37 @@ const ScoreBoardHeader = (props) => {
     return (
         <div className="score-board-header">
             <Period
-                value={(leagueName === 'MLB') ? 'INN' : leagueName === 'NHL' ? 'PER' : 'QTR'}
-                dataType="team"
+                value={(leagueName === 'MLB') ? '' : leagueName === 'NHL' ? 'PER' : 'QTR'}
+                dataType="team-header"
             />
             {times(totalPeriods, (index) => {
                 return (
                     <Period
                         key={index + 1}
                         value={index + 1}
-                        dataType="score"
+                        dataType="header"
                     />
                 )
             })}
             {(leagueName === 'MLB') ? (
                 <Fragment>
                     <Period
-                        value="R"
-                        dataType="finals"
+                        value="RUNS"
+                        dataType="finals-header"
                     />
                     <Period
-                        value="H"
-                        dataType="finals"
+                        value="HITS"
+                        dataType="finals-header"
                     />
                     <Period
-                        value="E"
-                        dataType="finals"
+                        value="ERR"
+                        dataType="finals-header"
                     />
                 </Fragment>
             ) : (
                 <Period
                     value="T"
-                    dataType="finals"
+                    dataType="finals-header"
                 />
             )}
         </div>
