@@ -7,20 +7,18 @@
     width: 15%;
     height: 40px;
     padding: .25rem 0;
-    font-size: 22px;
+    font-size: 14px;
     &.team, &.finals {
-        border: 2px solid #333;
         border-bottom: 0;
-        width: 30%;
     }
     &.score, &.finals {
         background: #0a0a0a;
         color: #ec1b24;
-        border: 5px solid #333;
+        border: 2px solid #333;
         box-sizing: border-box;
         border-right: 0;
         border-bottom: 0;
-        padding: .5rem 0;
+        // width: 25%;
         p {
             font-family: 'Press Start 2P', cursive;
             font-weight: 700;
@@ -41,8 +39,12 @@
 
     @include for-desktop {
         width: 20%; 
+        font-size: 22px;
         &.team, &.finals {
             width: 20%;
+        }
+        &.score, &.finals {
+            border-width: 5px;
         }
     }
 }

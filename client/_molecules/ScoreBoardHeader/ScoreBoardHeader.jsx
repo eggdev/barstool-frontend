@@ -24,17 +24,17 @@ const ScoreBoardHeader = (props) => {
                 )
             })}
             <Period
-                value={`${leagueName === 'MLB' ? 'RUN' : 'T'}`}
+                value={`${leagueName === 'MLB' ? 'R' : 'T'}`}
                 dataType="finals-header"
             />
             {(leagueName === 'MLB') && (
                 <Fragment>
                     <Period
-                        value="HIT"
+                        value="H"
                         dataType="finals-header"
                     />
                     <Period
-                        value="ERR"
+                        value="E"
                         dataType="finals-header"
                     />
                 </Fragment>

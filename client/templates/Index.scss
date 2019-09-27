@@ -1,4 +1,7 @@
+@import '../styles/Config.scss';
 
 .index-container {
-    padding: 0 3rem;
+    @include for-desktop {
+        padding: 0 3rem;
+    }
 }
