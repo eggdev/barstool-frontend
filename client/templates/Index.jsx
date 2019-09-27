@@ -42,6 +42,7 @@ class Index extends Component {
 
     render() {
         const { currentSport, gameData, loaded } = this.state;
+
         return (
             <div className={`index-container ${currentSport}`}>
                 <Header

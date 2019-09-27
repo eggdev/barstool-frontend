@@ -9,12 +9,12 @@ const Header = (props) => {
         <header>
             <Button
                 action={toggleSport}
-                className={`${currentSport === 'mlb' ? 'active' : 'inactive'}`}
+                className={`header-btn ${currentSport === 'mlb' ? 'active' : 'inactive'}`}
                 label="MLB"
             />
             <Button
                 action={toggleSport}
-                className={`${currentSport === 'nba' ? 'active' : 'inactive'}`}
+                className={`header-btn ${currentSport === 'nba' ? 'active' : 'inactive'}`}
                 label="NBA"
             />
         </header>

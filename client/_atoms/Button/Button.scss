@@ -1,9 +1,12 @@
 .btn {
-    width: 50%;
-    text-align: center;
-    padding: 1rem;
     outline: none;
     cursor: pointer;
+    text-align: center;
+    padding: 1rem;
+}
+
+.header-btn {
+    width: 50%;
     color: #0a0a0a;
     font-family: 'Arbutus', cursive;
     font-size: 20px;
